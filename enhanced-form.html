@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="An enhanced HTML5 form with accessible layout, lists, tables, and media."/>
+  <meta name="author" content="Adekunle Adeleke"/>
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+    figure {
+      margin: 20px 0;
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced HTML5 Form Example</h1>
+    <p>This page demonstrates the use of semantic tags, HTML5 form elements, media, lists, and tables.</p>
+  </header>
+
+  <main>
+    <!-- Ordered List -->
+    <section>
+      <h2>Steps to Complete the Form</h2>
+      <ol>
+        <li>Fill in your personal details.</li>
+        <li>Select your preferences.</li>
+        <li>Submit the form to complete registration.</li>
+      </ol>
+    </section>
+
+    <!-- Unordered List -->
+    <section>
+      <h2>What You Will Need</h2>
+      <ul>
+        <li>Valid Email Address</li>
+        <li>Mobile Phone</li>
+        <li>Resume (optional)</li>
+      </ul>
+    </section>
+
+    <!-- Table -->
+    <section>
+      <h2>Sample Data Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML & CSS</td>
+            <td>4 Weeks</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>6 Weeks</td>
+            <td>Intermediate</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Media -->
+    <section>
+      <h2>Introductory Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/600x200" alt="Sample Banner" />
+        <figcaption>HTML5 Media Example - Image Banner</figcaption>
+      </figure>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="POST" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+2345678901" pattern="^\+?\d{10,15}$" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="course">Preferred Course:</label>
+          <select id="course" name="course" required>
+            <option value="">--Select--</option>
+            <option value="html">HTML & CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="mern">MERN Stack</option>
+          </select>
+
+          <label for="experience">Experience Level:</label>
+          <input type="text" id="experience" name="experience" value="Beginner" readonly />
+
+          <label>
+            <input type="checkbox" name="newsletter" checked />
+            Subscribe to newsletter
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Comments</legend>
+          <label for="comments">Tell us more:</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Any questions or additional info..."></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Adekunle Adeleke. All rights reserved.</p>
+  </footer>
+</body>
+</html>
